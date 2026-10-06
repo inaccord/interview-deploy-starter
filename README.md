@@ -17,13 +17,7 @@ curl http://localhost:3000/health
 Ship this service to Google Cloud Run in the `accord-sandbox` project, with the
 cloud resources defined as infrastructure as code.
 
-1. Containerize it. There is no Dockerfile. Write one.
-2. Build the image and push it to the sandbox registry:
-   `us-central1-docker.pkg.dev/accord-sandbox/interview/<your-name>`
-   Build locally with Docker or remotely with Cloud Build, your choice.
-3. Define the Cloud Run service and its IAM in Terraform or Pulumi, and apply it.
-   The service should be named `<your-name>-status` and reachable from the public internet.
-4. Confirm `GET /health` works from the public URL.
+Confirm `GET /health` works from the public URL.
 
 Stretch, if you have time: run the service under a dedicated service account with
 the minimum roles it needs.
