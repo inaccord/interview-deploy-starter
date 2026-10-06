@@ -31,7 +31,7 @@ When you are done, be ready to walk through every resource you created and why.
 
 ## What you have
 
-- Owner-free Editor access to `accord-sandbox`, granted to your Google account
+- Editor access to the `accord-sandbox` GCP project, granted to your Google account
 - `gcloud` already authenticated on the interview machine, or your own laptop
 - 45 minutes, then 15 minutes of walkthrough
 
