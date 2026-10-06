@@ -14,17 +14,20 @@ curl http://localhost:3000/health
 
 ## Your task
 
-Ship this service to Google Cloud Run in the `accord-sandbox` project.
+Ship this service to Google Cloud Run in the `accord-sandbox` project, with the
+cloud resources defined as infrastructure as code.
 
 1. Containerize it. There is no Dockerfile. Write one.
 2. Build the image and push it to the sandbox registry:
    `us-central1-docker.pkg.dev/accord-sandbox/interview/<your-name>`
    Build locally with Docker or remotely with Cloud Build, your choice.
-3. Deploy it to Cloud Run as a service named `<your-name>-status`.
-4. Run it under a dedicated service account with the minimum roles it needs.
-5. Confirm `GET /health` works from the public URL.
+3. Define the Cloud Run service and its IAM in Terraform or Pulumi, and apply it.
+   The service should be named `<your-name>-status` and reachable from the public internet.
+4. Confirm `GET /health` works from the public URL.
 
-Infrastructure as code (Terraform or Pulumi) is welcome but not required.
+Stretch, if you have time: run the service under a dedicated service account with
+the minimum roles it needs.
+
 Use whatever tools you normally would, including AI assistants.
 
 When you are done, be ready to walk through every resource you created and why.
@@ -34,6 +37,7 @@ When you are done, be ready to walk through every resource you created and why.
 - Editor access to the `accord-sandbox` GCP project, granted to your Google account
 - `gcloud` already authenticated on the interview machine, or your own laptop
 - 45 minutes, then 15 minutes of walkthrough
+- Terraform is on the interview machine; bring your own if you prefer Pulumi
 
 ## Notes
 
