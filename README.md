@@ -1,23 +1,32 @@
-# Accord Status Service
+# Accord Todo
 
-A small Node HTTP service with two endpoints:
+A small todo app: a React frontend (Vite + TypeScript) served by a Node API.
+Todos are kept in memory on the server.
 
-- `GET /` returns service metadata
+Endpoints:
+
 - `GET /health` returns `{ "status": "ok" }`
+- `GET /api/info` returns hostname, uptime, and revision
+- `GET | POST /api/todos`, `PATCH | DELETE /api/todos/:id`
+- everything else serves the built frontend from `dist/`
 
 Run it locally:
 
 ```
-npm start
-curl http://localhost:3000/health
+npm install
+npm run build     # type-check and build the frontend into dist/
+npm start         # serve API and frontend on http://localhost:3000
 ```
+
+For frontend development with hot reload, run `npm run dev:api` in one terminal
+and `npm run dev` in another. Vite proxies `/api` and `/health` to the API.
 
 ## Your task
 
-Ship this service to Google Cloud Run in the `accord-sandbox` project, with the
+Ship this app to Google Cloud Run in the `accord-sandbox` project, with the
 cloud resources defined as infrastructure as code.
 
-Confirm `GET /health` works from the public URL.
+Confirm the app loads from the public URL and you can add a todo.
 
 Stretch, if you have time: run the service under a dedicated service account with
 the minimum roles it needs.
@@ -35,5 +44,4 @@ When you are done, be ready to walk through every resource you created and why.
 
 ## Notes
 
-- Something about this app will not work as-is on Cloud Run. Finding and fixing it is part of the exercise.
 - Do not store anything sensitive in the project. It is wiped after the interview.
