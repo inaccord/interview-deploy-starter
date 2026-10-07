@@ -40,7 +40,6 @@ When you are done, be ready to walk through every resource you created and why.
 - Editor access to the `accord-sandbox` GCP project, granted to your Google account
 - `gcloud` already authenticated on the interview machine, or your own laptop
 - 45 minutes, then 15 minutes of walkthrough
-- Terraform is on the interview machine; bring your own if you prefer Pulumi
 
 ## Notes
 
